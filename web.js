@@ -13,7 +13,7 @@ app.get('/', function(request, response) {
   response.send(out);
   console.log("Script: " + __filename + "\nWrote: " + out + " To: " + outfile);*/
   data = fs.readFileSync(infile); 
-  response.send(data.toString("utf-8") + " from " + infile);
+  response.send(data.toString("utf-8"));
 });
 
 var port = process.env.PORT || 5000;
