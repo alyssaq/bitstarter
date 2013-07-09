@@ -4,13 +4,16 @@ var app = express.createServer(express.logger());
 
 
 var outfile = "hello.txt", out;
+var infile = "index.html";
 
 app.get('/', function(request, response) {
-  /*response.send('Hello World!');*/
+  /*response.send('Hello World!');
   out = findPrimeNumbers(545);
   fs.writeFileSync(outfile, out);  
   response.send(out);
-  console.log("Script: " + __filename + "\nWrote: " + out + " To: " + outfile);
+  console.log("Script: " + __filename + "\nWrote: " + out + " To: " + outfile);*/
+  data = fs.readFileSync(infile); 
+  response.send(data.toString("utf-8") + " from " + infile);
 });
 
 var port = process.env.PORT || 5000;
