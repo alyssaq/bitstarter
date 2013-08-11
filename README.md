@@ -3,4 +3,4 @@ bitstarter
 
 Stanford Startup Engineering App
 
-http://alyssa-bitstarter.herokuapp.com/
+http://bunapp.herokuapp.com/
